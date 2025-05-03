@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+        }
+        button {
+            width: 200px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 05</h1>
+    <button onclick="calcular()">Clique aqui</button>
+    <section id="resultado">
+        <p>Aqui vai aparecer o resultado...</p>
+    </section>
+
+    <script>
+        alert('Olá, bem vindo(a) a meu site!!')
+        function calcular () {
+            let numero = Number(prompt('Digite um numero'));
+            let res = window.document.querySelector('section#resultado');
+
+            res.innerHTML = `<p>O dobro do <strong>${numero}</strong> é <strong>${numero*2}</strong> e a metade é <strong>${numero/2}</strong>.</p>`
+        }
+    </script>
+</body>
+</html>

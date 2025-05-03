@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+        }
+        button {
+            width: 200px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 04</h1>
+    <button onclick="saudar()">Clique aqui!</button>
+    <section id="resultado">
+        <p>Aqui vai aparecer o resultado...</p>
+    </section>
+    <script>
+        function saudar () {
+            let res = window.document.querySelector('section#resultado');
+            let nome = window.prompt('Qual o seu nome?');
+
+            res.innerHTML = `<p>Olá <strong>${nome}</strong>, é um grande prazer te conhecer!! &#x1F596</p>`
+        } 
+    </script>
+</body>
+</html>

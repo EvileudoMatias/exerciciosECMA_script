@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+        }
+        button {
+            width: 200px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 06</h1>
+    <button onclick="somar()">Clique aqui</button>
+    <section id="resultado">
+        <p>O resultado aparece aqui...</p>
+    </section>
+    
+    <script>
+        function somar () {
+            let n1 = Number(prompt('Digite um numero'));
+            let n2 = Number(prompt('Digite outro numero'));
+            let res = document.getElementById('resultado');
+
+            res.innerHTML = `<p>A soma dos numero é <mark>${n1 + n2}</mark></p>`
+        }
+    </script>
+</body>
+</html>

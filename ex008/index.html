@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+        }
+        button {
+            width: 200px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 08</h1>
+    <h2>Vários calculos em ECMAscript</h2>
+    <button onclick="calcular()">Clique aqui</button>
+    <section id="resultado">
+        <p>Aqui vai aparecer o resultado...</p>
+    </section>
+
+    <script>
+        function calcular() {
+            let numero = Number(prompt("Digite seu número"));
+
+            let res = document.querySelector('section#resultado');
+            res.innerHTML = `<p>O Numero a ser analisado é: <mark>${numero}</mark></p><hr>`
+            res.innerHTML += `<p>O valor absoluto é: <mark>${Math.abs(numero)}</mark></p>`
+            res.innerHTML += `<p>A sua parte inteira é: <mark>${Math.trunc(numero)}</mark></p>`
+            res.innerHTML += `<p>O valor inteiro mais próximo: <mark>${Math.round(numero)}</mark></p>`
+            res.innerHTML += `<p>A raiz quadrada é: <mark>${Math.sqrt(numero)}</mark></p>`
+            res.innerHTML += `<p>A raiz cúbica é: <mark>${Math.cbrt(numero)}</mark></p>`
+            res.innerHTML += `<p>O valor de <mark>${numero}<sup>2</sup></mark> é <mark>${Math.pow(numero, 2)}</mark></p>`
+            res.innerHTML += `<p>O valor de <mark>${numero}<sup>3</sup></mark> é <mark>${Math.pow(numero, 3)}</mark></p>`
+        }
+    </script>
+</body>
+</html>

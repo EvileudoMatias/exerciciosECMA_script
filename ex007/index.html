@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+        }
+        button {
+            width: 200px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício 07</h1>
+    <button onclick="calcularMedia()">Clique aqui</button>
+    <section id="resultado">
+        <p>O resultado aparecerá aqui...</p>
+    </section>
+    
+    <script>
+        function calcularMedia () {
+            let nome = prompt('Qual o nome do alune?');
+            let n1 = Number(prompt('Qual a primeira nota?'));
+            let n2 = Number(prompt('Qual a segunda nota'));
+            let res = window.document.querySelector('section#resultado');
+
+            res.innerHTML = `<p>Olá <strong>${nome}</strong></p>`
+            res.innerHTML += `<p>Suas notas foram, <mark>${n1}</mark> e <mark>${n2}</mark></p>` 
+            res.innerHTML += `<p>Sua média é: <mark>${(n1 + n2)/2}</mark></p>` 
+        }
+    </script>
+</body>
+</html>
